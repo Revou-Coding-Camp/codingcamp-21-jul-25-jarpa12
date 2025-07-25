@@ -59,7 +59,7 @@ function renderTasks() {
     filteredTasks.forEach((task, index) => {
         taskList.innerHTML += 
         `<li class="task-item flex justify-between items-center py-2">
-            <span>${task.task} ${task.date}</span>
+            <span${task.completed ? ' style="text-decoration: line-through; color: gray;"' : ''}>${task.task} ${task.date}</span>
             <div>
                     <button type="button" class="px-[12px] py-[4px] rounded-[6px] bg-green-500 text-white" onclick="completeTask(${index});">Complete</button>
                     <button class="px-[12px] py-[4px] rounded-[6px] bg-red-500 text-white" onclick="removeTask(${index});">Delete</button>
