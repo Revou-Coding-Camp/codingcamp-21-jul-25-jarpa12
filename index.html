@@ -25,17 +25,24 @@
 
             <div>
                 <label for="Date" class="block text-sm font-medium text-gray-700">Date:</label>
-                <input type="date" id="Date" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" name="Date" required>
+                <input type="date" id="Date" class="mt-1 block w-full text-black-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm" name="Date" required>
             </div>
 
             <div>
-                <button class="border px-[24px] py-[4px] rounded-[6px] bg-blue-500 text-white">+</button>
+                <button type="button" class="px-[24px] py-[4px] rounded-[6px] bg-blue-500 text-white" onclick="addTask()">+</button>
             </div>
+
         </form>
         <section>
-            <div class="action-container">
-                <button class="border px-[28px] py-[4px] rounded-[6px] bg-white-500 text-black">Filter</button>
-                <button class="border px-[28px] py-[4px] rounded-[6px] bg-red-500 text-white">Delete All</button>
+            <div class="action-container pt-[8px] pb-[6px]">
+                <button type="button" class="px-[28px] py-[4px] rounded-[6px] bg-yellow-200 text-black" onclick="toggleFilter()">Filter</button>
+                <button type="button" class="px-[28px] py-[4px] rounded-[6px] bg-red-500 text-white" onclick="removeAllTask()">Delete All</button>
+            </div>
+             <header>
+                <p class="text-1xl font-bold pt-[16px]">Task List</p>
+            </header>
+            <div id="task-list">
+                <p>No Task Available</p>
             </div>
         </section>
     </main>

@@ -18,3 +18,15 @@ form {
     display: flex;
     justify-content: space-between;
 }
+
+li {
+    border-bottom: 1px solid;
+}
+
+#task-list {
+    height: 200px;
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
